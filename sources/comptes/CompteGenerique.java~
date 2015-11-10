@@ -1,0 +1,5 @@
+package comptes;
+
+public abstract class CompteGenerique implements Compte {
+
+}
