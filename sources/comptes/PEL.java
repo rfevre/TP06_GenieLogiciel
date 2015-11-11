@@ -1,11 +1,11 @@
 package comptes;
 
 public class PEL extends CompteEpargne {
-    private static final double TAUXINTERET = 0.05;
     private double versement;
     
-    public PEL() {
-	super(TAUXINTERET);
+    public PEL(double montant) {
+	super(montant);
+	super.tauxInteret=0.05;
 	versement=0;
     }
 

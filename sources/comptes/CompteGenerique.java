@@ -2,15 +2,16 @@ package comptes;
 import java.util.Date;
 
 public abstract class CompteGenerique implements Compte {
-    private int numCompte,anciennete;
+    private int numCompte;
+    protected int anciennete;
     private double montant;
-    private static num=0;
+    private static int num = 0;
 
-    public CompteGenerique (){
+    public CompteGenerique (double montant){
 	this.numCompte=num;
 	num++;
 	anciennete=0;
-	montant=0;
+	montant=montant;
     }
 
     public void ajouter(double somme){
@@ -25,7 +26,7 @@ public abstract class CompteGenerique implements Compte {
 	return numCompte;
     }
 
-    public int getMontant() {
+    public double getMontant() {
 	return montant;
     }
 
@@ -37,6 +38,6 @@ public abstract class CompteGenerique implements Compte {
 	return "Numéro de compte : "+numCompte+" Montant : "+montant;
     }
     
-    public abstract void operationsMensuel() throws DepassementDecouvertExc, VersementsInsuffisantsExc {}
+    abstract void operationsMensuel() throws DepassementDecouvertExc, VersementsInsuffisantsExc;
 
 }

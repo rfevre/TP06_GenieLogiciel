@@ -4,15 +4,13 @@ public class CompteCourant extends CompteGenerique {
     private double decouvert=0;
     private double aggios=0;
 
-    public CompteCourant (double decouvert){
-	super();
+    public CompteCourant (double montant,double decouvert){
+	super(montant);
 	this.decouvert=decouvert;
     }
 
     public void retirer(double somme){
-	if (getMontant() + somme > getMontant()+decouvert)
-	    break;
-	else
+	if (getMontant() + somme < getMontant()+decouvert)
 	    super.retirer(somme);
     }
 
@@ -28,7 +26,7 @@ public class CompteCourant extends CompteGenerique {
 	    super.retirer(montantAggios);
 	}
 	if (getMontant() < -(decouvert)) {
-	    throw new DepassementDecouvertExc();
+	    throw new DepassementDecouvertExc((int)decouvert);
 	}
     }
 

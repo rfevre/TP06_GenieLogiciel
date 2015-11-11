@@ -3,9 +3,8 @@ package comptes;
 public class CompteEpargne extends CompteGenerique {
     private double tauxInteret;
 
-    public CompteEpargne (double tauxInteret){
-	super();
-	this.tauxInteret=tauxInteret;
+    public CompteEpargne (double montant){
+	super(montant);
     }
 
     public void retirer(double somme){
