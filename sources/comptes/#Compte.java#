@@ -1,4 +1,5 @@
 package comptes ;
+
 public interface Compte
 {
     /** Retourne le numéro identifiant le compte */

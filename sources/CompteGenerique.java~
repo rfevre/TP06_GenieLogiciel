@@ -1,5 +1,0 @@
-package comptes;
-
-public abstract CompteGenerique {
-
-}
